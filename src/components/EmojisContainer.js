@@ -7,7 +7,6 @@ export default function EmojisContainer() {
   const [emos, setEmos] = useState(emojis);
 
   const handleChange = (e) => {
-    e.preventDefault();
     let key = e.target.value.toLowerCase();
     let updatedList = emos.filter((item)=>{
       if(key === ""){
