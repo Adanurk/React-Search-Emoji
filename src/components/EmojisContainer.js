@@ -8,7 +8,7 @@ export default function EmojisContainer() {
 
   const handleChange = (e) => {
     let key = e.target.value.toLowerCase();
-    let updatedList = emos.filter((item)=>{
+    let updatedList = emojis.filter((item)=>{
       if(key === ""){
         return emos
       }else{
