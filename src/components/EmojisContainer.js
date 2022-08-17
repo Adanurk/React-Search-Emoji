@@ -5,9 +5,12 @@ import { useState } from 'react';
 
 export default function EmojisContainer() {
   const [emos, setEmos] = useState(emojis);
+  console.log(emos)
+
 
   const handleChange = (e) => {
     let key = e.target.value.toLowerCase();
+    //! since ky stays inside you dont need to use state 
     let updatedList = emojis.filter((item)=>{
       if(key === ""){
         return emos
@@ -15,8 +18,8 @@ export default function EmojisContainer() {
         return item.keywords.includes(key)
       }
     })
-    console.log(updatedList);
-    return setEmos(updatedList)
+    // console.log(updatedList);
+    setEmos(updatedList)
   }
 
   return (
